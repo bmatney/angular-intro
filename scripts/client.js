@@ -1,6 +1,6 @@
 var sigmanautApp = angular.module('SigmanautApp', []);
 
-sigmanautApp.controller('SigmanautController', function(){
+sigmanautApp.controller('SigmanautController', function () {
   console.log('Sigmanaut controller loaded');
 
   var self = this; // holds the value of this
@@ -16,7 +16,7 @@ sigmanautApp.controller('SigmanautController', function(){
 
   self.newPerson = {};
 
-  self.createPerson = function(){
+  self.createPerson = function () {
     console.log(self.newPerson);
     self.people.push(angular.copy(self.newPerson));
   };

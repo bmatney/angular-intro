@@ -29,13 +29,14 @@
           <label for="shoutout">First Name</label>
           <input type="text" name="shoutout" class="form-control" ng-model="sigmanaut.newPerson.shoutout" placeholder="Shoutout"/>
         </div>
+        <button type="submit" ng-click="sigmanaut.createPerson()">Submit</button>
       </form>
     </section>
     <section class="container">
       <h3>Class List</h3>
       <ul class="list-group">
         <li class="list-group-item" ng-repeat="person in sigmanaut.people">
-          {{person.firstName}} {{person.lastName}}: <a ng-href="https://www.github.com/{{person.git_username}}">My Github</a>
+          {{person.firstName}} {{person.lastName}}: <a ng-href="https://www.github.com/{{person.git_username}}">My Github</a> | {{person.shoutout}}
         </li>
       </ul>
     </section>
